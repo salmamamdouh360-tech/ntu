@@ -1,35 +1,20 @@
 import 'package:flutter/material.dart';
-
-import 'package:new_app/features/home/homeScreen.dart';
-import 'package:new_app/features/login/loginScreen.dart';
-import 'package:new_app/route_screen.dart';
-
-
-
-
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:new_app/root.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  //StateLessWidget is used if there is no interaction screen
+  //StateLessWidget does not change or rebuild
   @override
   Widget build(BuildContext context) {
-    Directions(context: context);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      //1
-      // routes: {
-      //   'home': (context) => HomeScreen(),
-      //   'login': (context) => LoginScreen(isLogoin: false),
-      // },
-      // initialRoute: 'login',
-
-      home: HomeScreen(),
-      
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: Root()),
     );
   }
 }
-
-// Dart

@@ -52,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){return RouteScreen(Screen: HomeScreen());}));
+                        Navigator.push(context, MaterialPageRoute(builder: (context){return  HomeScreen();}));
                       },
                       child: Container(
                         height: Directions.kHeight * 0.06,
@@ -74,7 +74,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: Center(
                           child: Text(
                             "إنشاء حساب ",
-                            style: TextStyle(
+                            style: TextStyle(color:  Color.fromARGB(255, 42, 128, 156),
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),

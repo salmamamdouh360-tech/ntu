@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             height: Directions.kHeight * 0.45,
             top: 160,
 
-            child: Image.asset('assets/first boy.png', fit: BoxFit.cover),
+            child: Image.asset('assets/first boy.png', ),
           ),
           Positioned(
             left: 250,
